@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="LoginStyle.css" />
+    <title>Form Validation</title>
+  </head>
+  <body>
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">
+        Email dan Password Salah <br />
+        Untuk Login Gunakan <br />
+        Email: admin@admin.com <br />
+        password: admin
+      </p>
+    </div>
+    <div class="containerForm">
+      <form id="login-form">
+        <div class="form">
+          <h1>Silahkan Login</h1>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email Address"
+          />
+          <div class="error" id="error"></div>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <div class="error" id="error"></div>
+
+          <button type="submit" id="login-form-submit" value="Login">
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="validationLogin.js"></script>
+  </body>
+</html>

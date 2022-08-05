@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="orderForm.css" />
+    <title>Form Order</title>
+  </head>
+  <body ng-app>
+    <form ng-app ng-controller="OrderFormController">
+      <h1>Pesanan</h1>
+
+      <ul>
+        <li
+          ng-repeat="menu in menu"
+          ng-click="toggleActive(menu)"
+          ng-class="{active:menu.active}"
+        >
+          {{menu.nama}} <span>Rp. {{menu.harga}}</span>
+        </li>
+      </ul>
+
+      <div class="total">Total: <span>Rp. {{total()}}</span></div>
+    </form>
+    <script src="orderForm.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+  </body>
+</html>
